@@ -342,7 +342,17 @@ function getHTML(/* Code here */){
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+const fruits = ["apples", "oranges", "bananas", "pears"];
+
+function randomize(arr){
+    randomArr = [...arr];
+    for (let i = randomArr.length - 1; i > 0; i--){
+      const x = Math.floor(Math.random()*i);
+      const temporary = randomArr[i];
+      randomArr[i] = randomArr[x];
+      randomArr[x] = temporary;
+    }
+    return randomArr;
 
     /* Code here */
 
