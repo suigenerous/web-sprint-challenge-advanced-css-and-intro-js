@@ -256,8 +256,9 @@ function get20s(arr){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(arr, index) {
+  arr.splice(index, 1);
+  return arr.length;
   }
   
  
@@ -275,10 +276,18 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
+const williamHerman = {
+  id: 20,
+  name: "William Herman", 
+  years: "1994-Present",
+  genre: "Hip-hop", 
+  nationality: "American",
+  bio: "Dope music producer. Makes sweet beats and tracks.",
+}
 
-    /* Code here */
-
+function addArtist(artist){
+  artists.push(artist);
+  return artists;
   }
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
